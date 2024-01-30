@@ -24,5 +24,13 @@ async def password(ctx, len_password: int):
 async def goober(ctx):
     await channel.send(file= discord.File('goober.png'))
 
+@bot.command()
+async def parola(ctx):
+    await ctx.send(gen_parola())
+
+def gen_parola():
+    parole =  ["Donna", "Satana", "Uomo", "Stray Kids"]
+    print(random.choice(parole))
+
 
 bot.run("token")
