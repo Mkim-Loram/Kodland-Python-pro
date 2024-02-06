@@ -24,13 +24,22 @@ async def password(ctx, len_password: int):
 async def goober(ctx):
     await channel.send(file= discord.File('goober.png'))
 
-@bot.command()
-async def parola(ctx):
-    await ctx.send(gen_parola())
 
 def gen_parola():
     parole =  ["Donna", "Satana", "Uomo", "Stray Kids"]
     print(random.choice(parole))
+
+@bot.command()
+async def parola(ctx):
+    await ctx.send(gen_parola())
+
+
+string help_message = "Ciao - to get greeted by the bot._ Password - to make the bot generate a password for you._ Goober - to generate a goober :O_ Parola - to generate a random word :D_ Help - to see the bot's commands like you're doing right now :]_"
+
+
+@bot.command()
+async def help(ctx):
+    await ctx.send(help_message)
 
 
 bot.run("token")
