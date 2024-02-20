@@ -6,7 +6,7 @@ from bot_logic import gen_pass
   
 intents = discord.Intents.default()
 intents.message_content = True
-bor = discord.Bot(intents=intents)
+bot = discord.Bot(intents=intents)
 
 @bot.event
 async def on_ready():
